@@ -26,7 +26,7 @@ class PopularityRecommender(BaseRecommender):
         )
         rating_stats = rating_stats.loc[
             rating_stats[("rating", "size")] > self.minimum_rating_counts
-        ].sort_values(by=[("rating", "mean")])
+        ].sort_values(by=[("rating", "mean")], ascending=False)
         pred_items = defaultdict(list)
         for user_id in dataset.test_items.keys():
             pred_items[user_id] = rating_stats.index.to_numpy()[
