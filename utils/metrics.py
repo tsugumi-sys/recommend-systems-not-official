@@ -51,7 +51,7 @@ def calc_recall_at_k(
     pred_items: Dict[int, List[int]], label_items: Dict[int, List[int]], k: int
 ) -> float:
     scores = []
-    for user_id in pred_items.keys():
+    for user_id in label_items.keys():
         scores.append(recall_at_k(pred_items[user_id], label_items[user_id], k))
     return np.mean(scores)
 
@@ -69,6 +69,6 @@ def calc_precition_at_k(
     pred_items: Dict[int, List[int]], label_items: Dict[int, List[int]], k: int
 ) -> float:
     scores = []
-    for user_id in pred_items.keys():
+    for user_id in label_items.keys():
         scores.append(precition_at_k(pred_items[user_id], label_items[user_id], k))
     return np.mean(scores)

@@ -1,7 +1,7 @@
-from collections import defaultdict, Counter
-import numpy as np
-from mlxtend.frequent_patterns import apriori, association_rules
 import sys
+from collections import Counter, defaultdict
+
+from mlxtend.frequent_patterns import apriori, association_rules
 
 sys.path.append("..")
 from utils.data_loader import Dataset  # noqa

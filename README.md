@@ -10,8 +10,9 @@
 
 Move to `algorithm/` directory and run each algorithms' file.
 
-| Algorithm              | RMSE | Precision@K | Recall@K | Source                       |
-| ---------------------- | ---- | ----------- | -------- | ---------------------------- |
-| RandomRecommender      | 1.88 | 0.0         | 0.0      | `random_recommender.py`      |
-| PopurarityRecommender  | 1.06 | 0.0         | 0.0      | `popularity_recommender.py`  |
-| AssociationRecommender | NaN  | 0.014       | 0.043    | `association_recommender.py` |
+| Algorithm              | RMSE  | Precision@K | Recall@K | Source                       |
+| ---------------------- | ----- | ----------- | -------- | ---------------------------- |
+| RandomRecommender      | 1.88  | 0.0         | 0.0      | `random_recommender.py`      |
+| PopurarityRecommender  | 1.06  | 0.0         | 0.0      | `popularity_recommender.py`  |
+| AssociationRecommender | NaN   | 0.014       | 0.043    | `association_recommender.py` |
+| UMCRecommender         | 0.952 | 0.002       | 0.005    | `umc_recommender.py`         |
