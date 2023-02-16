@@ -17,3 +17,4 @@ Move to `algorithm/` directory and run each algorithms' file.
 | AssociationRecommender  | NaN   | 0.014       | 0.043    | `association_recommender.py`  |
 | UMCRecommender          | 0.952 | 0.002       | 0.005    | `umc_recommender.py`          |
 | RandomForestRecommender | 0.996 | 0.0002      | 0.004    | `randomforest_recommender.py` |
+| SVDRecommender          | 1.04  | 0.020       | 0.065    | `svd_recommender.py`          |
