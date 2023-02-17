@@ -10,14 +10,13 @@ from utils.data_loader import Dataset  # noqa
 from algorithms.base_recommender import BaseRecommender, RecommendResult  # noqa
 
 
-class IMFRecommender(BaseRecommender):
+class BPRRecommender(BaseRecommender):
     def recommend(self, dataset: Dataset) -> RecommendResult:
         # Parameters
         n_factors = 5
         min_rating_count = 100
         n_epochs = 50
         rating_threshold = 4
-        alpha = 1.0
 
         train_data = dataset.train.groupby("movie_id").filter(
             lambda x: len(x["movie_id"]) >= min_rating_count
@@ -37,15 +36,11 @@ class IMFRecommender(BaseRecommender):
             matrix[
                 np.where(train_user_ids == user_id)[0][0],
                 np.where(train_movie_ids == movie_id)[0][0],
-            ] = (
-                1.0 * alpha
-            )
+            ] = 1.0
 
-        model = implicit.als.AlternatingLeastSquares(
+        model = implicit.bpr.BayesianPersonalizedRanking(
             factors=n_factors,
             iterations=n_epochs,
-            calculate_training_loss=True,
-            random_state=1,
         )
         model.fit(matrix)
 
@@ -55,9 +50,9 @@ class IMFRecommender(BaseRecommender):
             pred_items[user_id] = train_movie_ids[
                 recommends[np.where(train_user_ids == user_id)[0][0], :]
             ]
-        # NOTE: Skip RMSE evaluation.
+        # NOTE: Skip RMSE evaluation
         return RecommendResult(dataset.test.rating, pred_items)
 
 
 if __name__ == "__main__":
-    IMFRecommender().run_sample()
+    BPRRecommender().run_sample()

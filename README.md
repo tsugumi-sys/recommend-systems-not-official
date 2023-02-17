@@ -6,7 +6,7 @@
 
 ## Performance of Algorithms
 
-ユーザー1000人分のデータを用いた場合の各推薦アルゴリズムのメトリクス。
+ユーザー1000人分のデータを用いた場合の各推薦アルゴリズムのメトリクス参考値。
 
 Move to `algorithm/` directory and run each algorithms' file.
 
@@ -21,3 +21,4 @@ Move to `algorithm/` directory and run each algorithms' file.
 | NMFRecommender          | 1.048 | 0.019       | 0.060    | `nmf_recommender.py`          |
 | MFRecommender           | 1.027 | 0.010       | 0.034    | `mf_recommender.py`           |
 | IMFRecommender          | NaN   | 0.023       | 0.073    | `imf_recommender.py`          |
+| BPRRecommender          | NaN   | 0.022       | 0.069    | `bpr_recommender.py`          |
