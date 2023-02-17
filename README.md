@@ -19,3 +19,4 @@ Move to `algorithm/` directory and run each algorithms' file.
 | RandomForestRecommender | 0.996 | 0.0002      | 0.004    | `randomforest_recommender.py` |
 | SVDRecommender          | 1.04  | 0.020       | 0.065    | `svd_recommender.py`          |
 | NMFRecommender          | 1.048 | 0.019       | 0.060    | `nmf_recommender.py`          |
+| MFRecommender           | 1.027 | 0.010       | 0.034    | `mf_recommender.py`           |
