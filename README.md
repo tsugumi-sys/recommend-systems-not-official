@@ -22,4 +22,4 @@ Move to `algorithm/` directory and run each algorithms' file.
 | MFRecommender           | 1.027 | 0.010       | 0.034    | `mf_recommender.py`           |
 | IMFRecommender          | NaN   | 0.023       | 0.073    | `imf_recommender.py`          |
 | BPRRecommender          | NaN   | 0.022       | 0.069    | `bpr_recommender.py`          |
-| BPRRecommender          | 1.055 | 0.013       | 0.041    | `fm_recommender.py`           |
+| FMRecommender           | 1.055 | 0.013       | 0.041    | `fm_recommender.py`           |
