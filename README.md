@@ -14,6 +14,30 @@
 - Install dependencies
   - I installed manually like `pip install scikit-learn`.
 
+## Prepare MovieLends data
+
+- Create `data/` directory at the project root.
+  - `mkdir data`
+- Download moveilens data into `data/` directory. Run the following command in
+  the project root.
+  - `wget -nc --no-check-certificate https://files.grouplens.org/datasets/movielens/ml-10m.zip -P data`
+- Unzip downloaded data. Run the following command in the project root.
+  - `unzip -n data/ml-10m.zip -d data/`
+
+Finaly, the directories are as follows.
+
+```
+.
+├── README.md
+├── algorithms/
+├── data/
+│   ├── ml-10m.zip
+│   └── ml-10M100K/
+│       ├── movies.dat
+│       └── ...
+└── utils/
+```
+
 ## Performance of Algorithms
 
 ユーザー1000人分のデータを用いた場合の各推薦アルゴリズムのメトリクス参考値。
@@ -44,7 +68,7 @@ Move to `algorithm/` directory and run each algorithms' file.
 - item2vec (Neural item embedding for collaborative filtering, Oren Barkan and
   Noam Koenigsten, 2016 & Mihajlo E-commerce ub your inbox: Product
   recommendations at scale, Grbovic et al, 2015)
-- BERT (BERT4Rec: Sequential recommendation with bidirectional encoder
+- BERT (BERT4Rec: Sequential recommendation with bidirectional encoder```
   representations from transformer, Fei Sun et al, 2019)
 - Nerural Collaborative Filtering (Xiangnan He, et al, 2017)
 - Wide and Deep (Heng-Tze Cheng et al, 2016, Google)
