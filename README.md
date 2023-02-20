@@ -4,6 +4,16 @@
 
 [Official implementation.](https://github.com/oreilly-japan/RecommenderSystems)
 
+## 環境構築
+
+- Create virtualenv.
+  - `python3 -m venv .venv`
+- Activate virtualenv.
+  - `source .venv/bin/activate.fish` (If you use fish shell.) Or you can call
+    `source .venv/bin/activate`.
+- Install dependencies
+  - I installed manually like `pip install scikit-learn`.
+
 ## Performance of Algorithms
 
 ユーザー1000人分のデータを用いた場合の各推薦アルゴリズムのメトリクス参考値。
